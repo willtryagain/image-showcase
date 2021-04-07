@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ScrollView, Text } from 'react-native';
+import { Image, ScrollView, Text, View } from 'react-native';
 import ImageView from './ImageView';
 
 
@@ -11,12 +11,21 @@ const logo = {
 
 export default function App() {
   var uris = [
-    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='  
   ]
+  uris.push(uris[0])
+  uris.push(uris[0])
+  uris.push(uris[0])
+
 
   var images = [];
   for (let index = 0; index < uris.length; index++) {
-    images.push(<ImageView key={index} uri={uris[index]}/>)
+    images.push(
+      <View>
+        <ImageView key={index} uri={uris[index]}/>
+        <Text key={index} >Image {index + 1} {"\n"}</Text>  
+      </View>
+    )
   }
 
   return (

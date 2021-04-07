@@ -6,7 +6,8 @@ import {Image} from 'react-native';
 export default function ImageView (props) {
   return (
     // <Modal visible={true} transparent={true}>
-        <Image source={{uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='}}/>
+    <Image source={{uri: props.uri}}
+    style={{width: 400, height: 400}} />
     // </Modal>
   );
 } 
