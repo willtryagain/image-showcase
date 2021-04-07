@@ -23,7 +23,7 @@ export default function App() {
     images.push(
       <View>
         <ImageView key={index} uri={uris[index]}/>
-        <Text key={index} >Image {index + 1} {"\n"}</Text>  
+        <Text style={{ textAlign: 'center'}} key={'t' + index} >Image {index + 1} {"\n"}</Text>  
       </View>
     )
   }
